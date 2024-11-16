@@ -24,7 +24,7 @@ function App() {
         <textarea
           name="search-bar"
           id="search-bar"
-          title="s"
+          title="search-bar"
           placeholder="Pretraži"
         ></textarea>
       </div>

@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install --save-dev @types/node  # Install node types for the build
+          npm install --save-dev @types/node
 
       - name: Build the project
         run: npm run build
@@ -28,4 +28,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./dist # Ensure this matches the output directory from Vite
+          publish_dir: ./dist
+          personal_token: ${{ secrets.GH_TOKEN }} # Use the token from GitHub Secrets
